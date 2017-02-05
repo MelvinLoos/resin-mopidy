@@ -1,5 +1,7 @@
-FROM dduportal/rpi-alpine
-MAINTAINER Adrian Sampson <adrian@radbox.org>
+FROM armhf/alpine:edge
+
+MAINTAINER Melvin Loos <melvin@looselycoupled.nl>
+
 
 # Install packages.
 RUN apk add --update \
