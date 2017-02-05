@@ -9,8 +9,6 @@ ENV SPOTIFY_PASSWORD password
 RUN apk add --update \
         --repository http://dl-3.alpinelinux.org/alpine/edge/testing/ \
         py-six \
-        py-mopidy-spotify \
-        py-mopidy-mopify \
 	gstreamer1 gstreamer1-tools \
         gst-plugins-base1 gst-plugins-good1 gst-plugins-bad1 gst-plugins-ugly1 \
         alsa-utils \
