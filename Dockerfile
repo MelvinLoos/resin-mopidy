@@ -11,6 +11,7 @@ RUN apk add --update \
         python2-dev \
         py-six \
         py-gi \
+        py-gobject \
         py-gst0.10 \
 	gstreamer1 gstreamer1-tools \
         gst-plugins-base1 gst-plugins-good1 gst-plugins-ugly1 \
