@@ -5,6 +5,8 @@ MAINTAINER Melvin Loos <melvin@looselycoupled.nl>
 ENV SPOTIFY_USERNAME username
 ENV SPOTIFY_PASSWORD password
 
+COPY qemu-arm-static /usr/bin/qemu-arm-static
+
 # Default configuration
 COPY mopidy.conf /var/lib/mopidy/.config/mopidy/mopidy.conf
 
