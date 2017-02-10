@@ -8,10 +8,9 @@ ENV SPOTIFY_PASSWORD password
 # Install packages.
 RUN apk add --update \
         --repository http://dl-3.alpinelinux.org/alpine/edge/testing/ \
-        python2-dev \
+        python2 python2-dev \
         py-six \
-        py-gobject \
-        py-gobject-dev \
+        py-gobject py-gobject-dev \
         py-gst0.10 \
 	gstreamer1 gstreamer1-tools \
         gst-plugins-base1 gst-plugins-good1 gst-plugins-ugly1 \
