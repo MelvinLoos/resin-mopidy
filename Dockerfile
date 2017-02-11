@@ -11,13 +11,17 @@ RUN wget -q -O - http://apt.mopidy.com/mopidy.gpg | apt-key add - \
     mopidy-spotify \
     python-pip \
     python-pygame \
-  && rm -rf /var/lib/apt/lists/*
+  && apt-get clean && rm -rf /var/lib/apt/lists/*
 
-RUN pip install \
+RUN pip install --no-cache-dir \
   Mopidy-Moped \
   Mopidy-Touchscreen \
   Mopidy-Youtube
 
 COPY start.sh /start.sh
+
+# removes docs from image 
+# see https://docs.resin.io/deployment/build-optimisation/#pro-tips-for-slimming-down-your-build
+COPY 01_nodoc /etc/dpkg/dpkg.cfg.d/
 
 CMD /start.sh
