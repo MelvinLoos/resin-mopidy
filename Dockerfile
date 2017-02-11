@@ -13,7 +13,7 @@ RUN wget -q -O - http://apt.mopidy.com/mopidy.gpg | apt-key add - \
     python-pygame \
   && apt-get clean && rm -rf /var/lib/apt/lists/*
 
-RUN pip install --no-cache-dir \
+RUN pip install \
   Mopidy-Moped \
   Mopidy-Touchscreen \
   Mopidy-Youtube
